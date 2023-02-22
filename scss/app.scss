@@ -22,7 +22,10 @@ body {
   margin: auto;
 }
 
-// bootstrap customer css
+// customized css
+a {
+  text-decoration: none;
+}
 .container-fluid {
   max-width: 1680px;
 }
@@ -30,3 +33,4 @@ body {
 @import "./header";
 @import "./navbar";
 @import "./carousel";
+@import "./homeProducts";

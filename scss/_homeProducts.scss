@@ -1,0 +1,122 @@
+// home page products section styling start
+
+main {
+  // deal of the day section styling
+  .deals_sections {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 1.5rem 0;
+
+    .today_products {
+      flex: 0.8;
+      background-color: $white;
+
+      .heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        h1 {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 2.4rem;
+          margin-bottom: 0;
+          color: $black;
+
+          .timer {
+            display: flex;
+            align-items: center;
+            margin: 0 0 0 2rem;
+
+            i {
+              color: $gray;
+            }
+            span {
+              margin-left: 1rem;
+              color: $gray;
+              font-weight: 400;
+              font-size: 1.6rem;
+            }
+          }
+        }
+
+        button {
+          background-color: $blue;
+          color: $white;
+          font-size: 1.2rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          padding: 1rem 2rem;
+          border-radius: 2px;
+        }
+      }
+
+      .products {
+        padding: 1.5rem;
+
+        .card-group {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 240px));
+          align-items: center;
+          justify-content: space-around;
+
+          .card {
+            min-height: 340px;
+            border: none;
+            padding: 2.5rem 1.5rem;
+
+            img {
+              height: 200px;
+              margin: auto;
+              object-fit: contain;
+            }
+
+            .card-body {
+              text-align: center;
+              padding: 0;
+              margin-top: 1.4rem;
+
+              h5 {
+                font-size: 1.4rem;
+                color: $black;
+                margin: 0;
+              }
+              p {
+                font-size: 1.4rem;
+                padding: 0.8rem 0 0 0;
+                margin: 0;
+
+                &:nth-child(2) {
+                  color: $green;
+                  font-size: 1.6rem;
+                }
+
+                &:nth-child(3) {
+                  font-weight: 400;
+                  color: $gray;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .advertise_banner {
+      flex: 0.2;
+      margin-left: 2rem;
+
+      img {
+        width: 100%;
+        height: 450px;
+      }
+    }
+  }
+}
+
+// home page products section styling start
