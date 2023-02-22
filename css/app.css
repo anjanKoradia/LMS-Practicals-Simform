@@ -18,6 +18,10 @@ body {
   margin: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container-fluid {
   max-width: 1680px;
 }
@@ -222,4 +226,115 @@ header .navbar .navbar-nav .dropdown:hover .dropdown-menu {
 .carousel_container .carousel button i {
   color: #212121 !important;
   font-size: 2.5rem;
+}
+
+main .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+main .heading h1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2.4rem;
+  margin-bottom: 0;
+  color: #212121;
+}
+main .heading button {
+  background-color: #2874f0;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+main .products {
+  padding: 1.5rem;
+}
+main .products .card-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 240px));
+  align-items: center;
+  justify-content: space-around;
+}
+main .products .card-group .card {
+  min-height: 340px;
+  border: none;
+  padding: 2.5rem 1.5rem;
+}
+main .products .card-group .card img {
+  height: 200px;
+  margin: auto;
+  object-fit: contain;
+}
+main .products .card-group .card .card-body {
+  text-align: center;
+  padding: 0;
+  margin-top: 1.4rem;
+}
+main .products .card-group .card .card-body h5 {
+  font-size: 1.4rem;
+  color: #212121;
+  margin: 0;
+}
+main .products .card-group .card .card-body p {
+  font-size: 1.4rem;
+  padding: 0.8rem 0 0 0;
+  margin: 0;
+}
+main .products .card-group .card .card-body p:nth-child(2) {
+  color: #388e3c;
+  font-size: 1.6rem;
+}
+main .products .card-group .card .card-body p:nth-child(3) {
+  font-weight: 400;
+  color: #878787;
+}
+main .deals_sections {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+main .deals_sections .today_products {
+  flex: 0.8;
+  background-color: #ffffff;
+}
+main .deals_sections .today_products .heading h1 .timer {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 2rem;
+}
+main .deals_sections .today_products .heading h1 .timer i {
+  color: #878787;
+}
+main .deals_sections .today_products .heading h1 .timer span {
+  margin-left: 1rem;
+  color: #878787;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+main .deals_sections .advertise_banner {
+  flex: 0.2;
+  margin-left: 2rem;
+}
+main .deals_sections .advertise_banner img {
+  width: 100%;
+  height: 450px;
+}
+main .books_instrument_section {
+  background-color: #ffffff;
+}
+main .books_instrument_section .heading h1 {
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .books_instrument_section .heading h1 span {
+  font-size: 1.4rem;
+  margin-top: 0.6rem;
+  font-weight: 300;
 }/*# sourceMappingURL=app.css.map */
