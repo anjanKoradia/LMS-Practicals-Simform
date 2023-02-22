@@ -20,8 +20,124 @@
       href="https://kit.fontawesome.com/e490545e1d.css"
       crossorigin="anonymous"
     />
+
+    <!-- External custom CSS -->
+    <link rel="stylesheet" href="./css/app.css" />
   </head>
   <body>
+    <!-- header start -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <div class="brand_logo">
+            <a class="navbar-brand" href="#">
+              <img src="./images/flipkart.png" alt="" />
+            </a>
+            <a href="/plus" class="brand_plus">
+              Explore <span>Plus</span>
+              <sup>
+                <img src="./images/flipkart-plus.png" alt="" />
+              </sup>
+            </a>
+          </div>
+          <form role="search">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search for products, brand and more"
+              aria-label="Search"
+            />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+          <div class="login_dropdown">
+            <button type="button" class="login_btn">Login</button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="">
+                  <span>New Customer?</span>
+                  <span>Sign Up</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="">
+                  <i class="fa-solid fa-user"></i>
+                  My Profile
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="">
+                  <i class="fa-solid fa-plus"></i> Flipkart Plus Zone
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="">
+                  <i class="fa-solid fa-bag-shopping"></i> Orders
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="">
+                  <i class="fa-solid fa-heart"></i> Wishlist
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="">
+                  <i class="fa-solid fa-ticket"></i> Rewards
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="">
+                  <i class="fa-solid fa-wallet"></i> Gift Cards
+                </a>
+              </li>
+            </ul>
+          </div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#"
+                >Become a Seller</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"> More </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="">
+                    <i class="fa-solid fa-bell"></i>
+                    Notification Preferences
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="">
+                    <i class="fa-solid fa-clipboard-question"></i>
+                    24x7 Customer Care
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="">
+                    <i class="fa-solid fa-arrow-trend-up"></i> Advertise
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="">
+                    <i class="fa-solid fa-download"></i> Download App
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-cart-shopping me-2"></i>
+                Cart
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- header end -->
+
     <!-- Bootstrap-(v5.3) JS CDN -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

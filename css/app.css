@@ -16,4 +16,165 @@ body {
   background-color: #f1f3f6;
   max-width: 1920px;
   margin: auto;
+}
+
+header .navbar {
+  background-color: #2874f0;
+  padding: 0;
+  height: 56px;
+}
+header .navbar .brand_logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 137px;
+}
+header .navbar .brand_logo .navbar-brand {
+  margin-left: auto !important;
+  margin: 0;
+}
+header .navbar .brand_logo .navbar-brand img {
+  width: 75px;
+}
+header .navbar .brand_logo .brand_plus {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-top: -2px;
+  text-decoration: none;
+  margin-left: auto !important;
+}
+header .navbar .brand_logo .brand_plus span {
+  color: #ffe500;
+  font-weight: 500;
+}
+header .navbar .brand_logo .brand_plus img {
+  width: 10px;
+  height: 10px;
+  filter: opacity(100);
+}
+header .navbar .brand_logo .brand_plus:hover {
+  text-decoration: white underline;
+}
+header .navbar form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.2rem;
+  width: 100%;
+  max-width: 580px;
+  min-width: 262px;
+}
+header .navbar form input {
+  border-radius: 2px 0 0 2px;
+  height: 36px;
+  padding: 0 1.6rem;
+  font-size: 1.4rem;
+}
+header .navbar form input::placeholder {
+  font-size: 1.4rem;
+  color: #878787;
+}
+header .navbar form button {
+  background-color: #ffffff;
+  font-size: 1.8rem;
+  color: #2874f0;
+  padding: 0 1.2rem;
+  height: 36px;
+  border: 1px solid #dee2e6;
+  border-radius: 0 2px 2px 0;
+}
+header .navbar form button:hover {
+  background-color: #ffffff;
+}
+header .navbar .login_dropdown {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  position: relative;
+}
+header .navbar .login_dropdown .login_btn {
+  background-color: #ffffff;
+  color: #2874f0;
+  font-size: 1.6rem;
+  padding: 0.5rem 4rem;
+  border: 1px solid #f1f3f6;
+  border-radius: 2px;
+  margin: 0 2rem;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+header .navbar .login_dropdown .dropdown-menu {
+  display: none !important;
+  position: absolute;
+  left: -30px;
+  top: 55px;
+  width: 250px;
+}
+header .navbar .login_dropdown .dropdown-menu li {
+  margin: 0;
+}
+header .navbar .login_dropdown .dropdown-menu li:nth-child(1) a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .navbar .login_dropdown .dropdown-menu li:nth-child(1) a span {
+  font-weight: 500;
+}
+header .navbar .login_dropdown .dropdown-menu li:nth-child(1) a span:nth-child(2) {
+  color: #2874f0;
+}
+header .navbar .login_dropdown .dropdown-menu li a {
+  color: #212121;
+  padding: 1.5rem 2rem;
+  font-size: 1.4rem;
+}
+header .navbar .login_dropdown .dropdown-menu li a:active {
+  background-color: white !important;
+}
+header .navbar .login_dropdown .dropdown-menu li i {
+  color: #2874f0;
+  margin-right: 1rem;
+}
+header .navbar .login_dropdown:hover .dropdown-menu {
+  display: block !important;
+}
+header .navbar .navbar-nav li {
+  min-width: fit-content;
+  margin: 0 2rem;
+}
+header .navbar .navbar-nav li a {
+  font-size: 1.6rem;
+  color: #ffffff;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+header .navbar .navbar-nav .dropdown .dropdown-menu {
+  display: none !important;
+  width: 230px;
+  left: -80px;
+  top: 55px;
+}
+header .navbar .navbar-nav .dropdown .dropdown-menu li {
+  margin: 0;
+}
+header .navbar .navbar-nav .dropdown .dropdown-menu li a {
+  color: #212121;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+}
+header .navbar .navbar-nav .dropdown .dropdown-menu li a:active {
+  background-color: white !important;
+}
+header .navbar .navbar-nav .dropdown .dropdown-menu li i {
+  color: #2874f0;
+  margin-right: 1rem;
+}
+header .navbar .navbar-nav .dropdown:hover .dropdown-menu {
+  display: block !important;
 }/*# sourceMappingURL=app.css.map */
