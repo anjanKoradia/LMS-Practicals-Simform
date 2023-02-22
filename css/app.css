@@ -177,4 +177,28 @@ header .navbar .navbar-nav .dropdown .dropdown-menu li i {
 }
 header .navbar .navbar-nav .dropdown:hover .dropdown-menu {
   display: block !important;
+}
+
+.navbar_section {
+  padding: 1.5rem 0;
+  background-color: #ffffff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.16);
+}
+.navbar_section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar_section .container a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  height: 90px;
+  font-weight: 500;
+}
+.navbar_section .container a img {
+  width: 64px;
+  height: 64px;
 }/*# sourceMappingURL=app.css.map */
