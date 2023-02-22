@@ -22,5 +22,11 @@ body {
   margin: auto;
 }
 
+// bootstrap customer css
+.container-fluid {
+  max-width: 1680px;
+}
+
 @import "./header";
 @import "./navbar";
+@import "./carousel";
