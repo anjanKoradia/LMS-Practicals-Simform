@@ -337,4 +337,63 @@ main .books_instrument_section .heading h1 span {
   font-size: 1.4rem;
   margin-top: 0.6rem;
   font-weight: 300;
+}
+
+footer {
+  background-color: #172337;
+}
+footer .footer_top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding-top: 4rem;
+  margin: 0 6.5rem;
+}
+footer .footer_top div h5 {
+  font-size: 1.2rem;
+  color: #878787;
+  margin-bottom: 0.9rem;
+}
+footer .footer_top div nav a {
+  color: #ffffff;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+}
+footer .footer_top div nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+footer .footer_top div pre {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: "Roboto", Arial, sans-serif;
+}
+footer .footer_top div pre span {
+  color: #2874f0;
+}
+footer .footer_top div:nth-child(5) {
+  padding: 0 2.5rem;
+  border-left: 1px solid #454d5e;
+  height: 130px;
+}
+footer .footer_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2.5rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid #454d5e;
+}
+footer .footer_bottom div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer_bottom div i {
+  color: #ffd700;
+  font-size: 1.4rem;
+}
+footer .footer_bottom div p {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin: 0 0 0 0.8rem;
 }/*# sourceMappingURL=app.css.map */
