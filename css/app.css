@@ -1,1 +1,19 @@
-/*# sourceMappingURL=app.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #f1f3f6;
+  max-width: 1920px;
+  margin: auto;
+}/*# sourceMappingURL=app.css.map */
