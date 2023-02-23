@@ -1,0 +1,37 @@
+// Google Font CDN
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: $white;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: $light-blue;
+  max-width: 1920px;
+  margin: auto;
+}
+
+// customized css
+a {
+  text-decoration: none;
+}
+.container-fluid {
+  max-width: 1680px;
+}
+
+@import "./header";
+@import "./navbar";
+@import "./carousel";
+@import "./homeProducts";
+@import "./footer";
