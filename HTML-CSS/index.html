@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shopping Site for MObiles, Electronics, ...</title>
+
+    <!-- Favicon -->
+    <link rel="icon" sizes="76x76" href="./images/flipkart-icon.jpeg" />
+
+    <!-- Bootstrap-(v5.3) CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/e490545e1d.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- External custom CSS -->
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+    <!-- header start -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <div class="brand_logo">
+            <a class="navbar-brand" href="#">
+              <img src="./images/flipkart.png" alt="Flipkart" />
+            </a>
+            <a href="/plus" class="brand_plus">
+              Explore <span>Plus</span>
+              <sup>
+                <img src="./images/flipkart-plus.png" alt="Plus Logo" />
+              </sup>
+            </a>
+          </div>
+          <form role="search">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search for products, brand and more"
+              aria-label="Search"
+            />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+          <div class="login_dropdown">
+            <button type="button" class="login_btn">Login</button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="">
+                  <span>New Customer?</span>
+                  <span>Sign Up</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="">
+                  <i class="fa-solid fa-user"></i>
+                  My Profile
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="">
+                  <i class="fa-solid fa-plus"></i> Flipkart Plus Zone
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="">
+                  <i class="fa-solid fa-bag-shopping"></i> Orders
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="">
+                  <i class="fa-solid fa-heart"></i> Wishlist
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="">
+                  <i class="fa-solid fa-ticket"></i> Rewards
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="">
+                  <i class="fa-solid fa-wallet"></i> Gift Cards
+                </a>
+              </li>
+            </ul>
+          </div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#"
+                >Become a Seller</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"> More </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="">
+                    <i class="fa-solid fa-bell"></i>
+                    Notification Preferences
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="">
+                    <i class="fa-solid fa-clipboard-question"></i>
+                    24x7 Customer Care
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="">
+                    <i class="fa-solid fa-arrow-trend-up"></i> Advertise
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="">
+                    <i class="fa-solid fa-download"></i> Download App
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-cart-shopping me-2"></i>
+                Cart
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- header end -->
+
+    <!-- navbar start -->
+    <nav class="navbar_section">
+      <div class="container">
+        <a class="nav-link" href="#">
+          <img src="./images/nav-imgs/grocery.webp" alt="Grocery" />
+          Grocery
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./images/nav-imgs/mobiles.webp" alt="Mobiles" />
+          Mobiles
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./images/nav-imgs/fashion.webp" alt="Fashion" />
+          Fashion
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./images/nav-imgs/electronics.webp" alt="Electronics" />
+          Electronics
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./images/nav-imgs/home.webp" alt="Home" />
+          Home
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./images/nav-imgs/appliances.webp" alt="Appliances" />
+          Appliances
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./images/nav-imgs/travel.webp" alt="Travel" />
+          Travel
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./images/nav-imgs/top-offers.webp" alt="Top Offers" />
+          Top Offers
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./images/nav-imgs/kids.webp" alt="Kids" />
+          Beauty, Toys & More
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./images/nav-imgs/vehicals.webp" alt="Vehicles" />
+          Two Wheelers
+        </a>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- carousel start -->
+    <section class="carousel_container container-fluid">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/carousel/1.webp" class="d-block w-100" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/carousel/2.webp" class="d-block w-100" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/carousel/3.webp" class="d-block w-100" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/carousel/4.webp" class="d-block w-100" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+    <!-- carousel end -->
+
+    <!-- home page products section start -->
+    <main class="container-fluid">
+      <!-- deal of the day section start -->
+      <section class="deals_sections">
+        <div class="today_products">
+          <div class="heading">
+            <h1>
+              Deals of the Day
+              <div class="timer">
+                <i class="fa-regular fa-clock"></i>
+                <span>21 : 01 : 02 Left</span>
+              </div>
+            </h1>
+            <button type="button" class="btn">view all</button>
+          </div>
+          <div class="products">
+            <div class="card-group">
+              <a href="">
+                <div class="card">
+                  <img
+                    src="./images/products/electronics/trimmer-1.webp"
+                    class="card-img-top"
+                    alt="Trimmer"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Home Saloon for Men</h5>
+                    <p class="card-text discount">Up to 80% Off</p>
+                    <p class="card-text">By Nova</p>
+                  </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="card">
+                  <img
+                    src="./images/products/accessories/watch-1.webp"
+                    class="card-img-top"
+                    alt="Watch"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Casio, Fastrack, Sonata $ more</h5>
+                    <p class="card-text discount">Upto 80%+Extra 10% off</p>
+                    <p class="card-text">Best Discount</p>
+                  </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="card">
+                  <img
+                    src="./images/products/toys/teddy-1.webp"
+                    class="card-img-top"
+                    alt="Teddy"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Teddy, Cars, Robots & more</h5>
+                    <p class="card-text discount">Up 70% Extra 10% off</p>
+                    <p class="card-text">Barbies, Pandas & more</p>
+                  </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="card">
+                  <img
+                    src="./images/products/toys/car-1.webp"
+                    class="card-img-top"
+                    alt="Car"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Remote Controls, Bikes & more</h5>
+                    <p class="card-text discount">Up 80% Extra 10% off</p>
+                    <p class="card-text">Hot Wheeler, Bikes, Cars & more</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="advertise_banner">
+          <img
+            src="./images/big-billion-days-banner-01.jpg"
+            alt="Big Billion Days Banner"
+          />
+        </div>
+      </section>
+      <!-- deal of the day section end -->
+
+      <!-- books and music instrument section start -->
+      <section class="books_instrument_section">
+        <div class="heading">
+          <h1>Books And music Instruments <span>Shop Now!</span></h1>
+          <button type="button" class="btn">view all</button>
+        </div>
+        <div class="products">
+          <div class="card-group">
+            <a href="">
+              <div class="card">
+                <img
+                  src="./images/products/books/book-1.webp"
+                  class="card-img-top"
+                  alt="Book"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Fiction Books</h5>
+                  <p class="card-text discount">Up to 70% Off</p>
+                  <p class="card-text">Shop Now!</p>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="card">
+                <img
+                  src="./images/products/instruments/harmonium.webp"
+                  class="card-img-top"
+                  alt="Harmonium"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Harmonium</h5>
+                  <p class="card-text discount">Up to 60% off</p>
+                  <p class="card-text">Shop Now!</p>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="card">
+                <img
+                  src="./images/products/books/book-2.webp"
+                  class="card-img-top"
+                  alt="Teddy"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Magazine</h5>
+                  <p class="card-text discount">Up 70% Extra 10% off</p>
+                  <p class="card-text">Shop Now!</p>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="card">
+                <img
+                  src="./images/products/instruments/accessories.webp"
+                  class="card-img-top"
+                  alt="Accessories"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Musical Accessories</h5>
+                  <p class="card-text discount">Up to 80% off</p>
+                  <p class="card-text">Shop Now!</p>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div class="card">
+                <img
+                  src="./images/products/instruments/guitar.webp"
+                  class="card-img-top"
+                  alt="Guitar"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Acoustic Guitars</h5>
+                  <p class="card-text discount">Starting from &#x20b9;1799</p>
+                  <p class="card-text">Shop Now!</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- books and music instrument section end -->
+    </main>
+    <!-- home page products section end -->
+
+    <!-- footer start -->
+    <footer>
+      <section class="footer_top">
+        <div class="about">
+          <h5>ABOUT</h5>
+          <nav class="nav flex-column">
+            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="#">Careers</a>
+            <a class="nav-link" href="#">Flipkat Stories</a>
+            <a class="nav-link" href="#">Press</a>
+            <a class="nav-link" href="#">Flipkat Wholesale</a>
+            <a class="nav-link" href="#">Corporate Information</a>
+          </nav>
+        </div>
+        <div class="help">
+          <h5>HELP</h5>
+          <nav class="nav flex-column">
+            <a class="nav-link" href="#">Payments</a>
+            <a class="nav-link" href="#">Shipping</a>
+            <a class="nav-link" href="#">Cancellation & Returns</a>
+            <a class="nav-link" href="#">FAQ</a>
+            <a class="nav-link" href="#">Report Infringement</a>
+          </nav>
+        </div>
+        <div class="policy">
+          <h5>POLICY</h5>
+          <nav class="nav flex-column">
+            <a class="nav-link" href="#">Return Policy</a>
+            <a class="nav-link" href="#">Terms Of Use</a>
+            <a class="nav-link" href="#">Security</a>
+            <a class="nav-link" href="#">Privacy</a>
+            <a class="nav-link" href="#">Sitemap</a>
+            <a class="nav-link" href="#">EPR Compliance</a>
+          </nav>
+        </div>
+        <div class="social">
+          <h5>SOCIAL</h5>
+          <nav class="nav flex-column">
+            <a class="nav-link" href="#">Facebook</a>
+            <a class="nav-link" href="#">Twitter</a>
+            <a class="nav-link" href="#">YouTube</a>
+          </nav>
+        </div>
+        <div class="mail_us">
+          <h5>Mail Us:</h5>
+          <pre>
+Flipkart Internet Private Limited,
+Buildings Alyssa, Begonia &
+Clove Embassy Tech Village,
+Outer Ring Road, Devarabeesanahalli Village,
+Bengaluru, 560103,
+Karnataka, India
+          </pre>
+        </div>
+        <div class="address">
+          <h5>Registered Office Address:</h5>
+          <pre>
+Flipkart Internet Private Limited,
+Buildings Alyssa, Begonia &
+Clove Embassy Tech Village,
+Outer Ring Road, Devarabeesanahalli Village,
+Bengaluru, 560103,
+Karnataka, India
+CIN : U51109KA2012PTC066107
+Telephone: <span>044-45614700</span>
+          </pre>
+        </div>
+      </section>
+      <section class="footer_bottom">
+        <div>
+          <i class="fa-solid fa-bag-shopping"></i>
+          <p>Become a Seller</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-star"></i>
+          <p>Advertise</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-gift"></i>
+          <p>Gift Cards</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-circle-question"></i>
+          <p>Help Center</p>
+        </div>
+        <div>
+          <i class="fa-regular fa-copyright"></i>
+          <p>2007-2023 Flipkart.com</p>
+        </div>
+        <div>
+          <img src="./images/payment-methods.svg" alt="Payment Methods" />
+        </div>
+      </section>
+    </footer>
+    <!-- footer end -->
+
+    <!-- Bootstrap-(v5.3) JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font Awesome Icon CDN -->
+    <script
+      src="https://kit.fontawesome.com/e490545e1d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

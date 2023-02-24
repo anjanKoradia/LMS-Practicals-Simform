@@ -1,0 +1,202 @@
+// header styling start
+header {
+  .navbar {
+    background-color: $blue;
+    padding: 0;
+    height: 56px;
+
+    // flipkart logo styling
+    .brand_logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 137px;
+
+      .navbar-brand {
+        margin-left: auto !important;
+        margin: 0;
+        img {
+          width: 75px;
+        }
+      }
+
+      .brand_plus {
+        color: $white;
+        font-size: 1.1rem;
+        font-style: italic;
+        margin-top: -2px;
+        text-decoration: none;
+        margin-left: auto !important;
+
+        span {
+          color: $yellow;
+          font-weight: 500;
+        }
+        img {
+          width: 10px;
+          height: 10px;
+          filter: opacity(100);
+        }
+        &:hover {
+          text-decoration: white underline;
+        }
+      }
+    }
+
+    // search box styling
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 1.2rem;
+      width: 100%;
+      max-width: 580px;
+      min-width: 262px;
+
+      input {
+        border-radius: 2px 0 0 2px;
+        height: 36px;
+        padding: 0 1.6rem;
+        font-size: 1.4rem;
+
+        &::placeholder {
+          font-size: 1.4rem;
+          color: $gray;
+        }
+      }
+
+      button {
+        background-color: $white;
+        font-size: 1.8rem;
+        color: $blue;
+        padding: 0 1.2rem;
+        height: 36px;
+        border: 1px solid #dee2e6;
+        border-radius: 0 2px 2px 0;
+
+        &:hover {
+          background-color: $white;
+        }
+      }
+    }
+
+    // login button styling
+    .login_dropdown {
+      display: flex;
+      align-items: center;
+      height: 56px;
+      position: relative;
+
+      .login_btn {
+        background-color: $white;
+        color: $blue;
+        font-size: 1.6rem;
+        padding: 0.5rem 4rem;
+        border: 1px solid $light-blue;
+        border-radius: 2px;
+        margin: 0 2rem;
+        line-height: 2rem;
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+      .dropdown-menu {
+        display: none !important;
+        position: absolute;
+        left: -30px;
+        top: 55px;
+        width: 250px;
+
+        li {
+          margin: 0;
+
+          &:nth-child(1) {
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              span {
+                font-weight: 500;
+                &:nth-child(2) {
+                  color: $blue;
+                }
+              }
+            }
+          }
+
+          a {
+            color: $black;
+            padding: 1.5rem 2rem;
+            font-size: 1.4rem;
+
+            &:active {
+              background-color: white !important;
+            }
+          }
+          i {
+            color: $blue;
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      &:hover {
+        .dropdown-menu {
+          display: block !important;
+        }
+      }
+    }
+
+    // header nav-links and dropdown styling
+    .navbar-nav {
+      li {
+        min-width: fit-content;
+        margin: 0 2rem;
+
+        a {
+          font-size: 1.6rem;
+          color: $white;
+          height: 56px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+      }
+
+      .dropdown {
+        .dropdown-menu {
+          display: none !important;
+          width: 230px;
+          left: -80px;
+          top: 55px;
+
+          li {
+            margin: 0;
+
+            a {
+              color: $black;
+              padding: 1.5rem;
+              font-size: 1.4rem;
+
+              &:active {
+                background-color: white !important;
+              }
+            }
+            i {
+              color: $blue;
+              margin-right: 1rem;
+            }
+          }
+        }
+
+        &:hover {
+          .dropdown-menu {
+            display: block !important;
+          }
+        }
+      }
+    }
+  }
+}
+// header styling end
