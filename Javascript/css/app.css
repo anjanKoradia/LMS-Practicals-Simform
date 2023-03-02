@@ -1,1 +1,35 @@
-/*# sourceMappingURL=app.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+html {
+  --bg: #f5f6f7;
+  --color-text: rgb(75, 74, 74);
+  --orange: #ff735c;
+  --shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme=dark] {
+  --bg: #131419;
+  --color-text: #ffffff;
+  --orange: #ff735c;
+  --shadow: -3px -3px 10px rgba(255, 255, 255, 0.05),
+    3px 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: white;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: var(--bg);
+  max-width: 1920px;
+  height: 100vh;
+  margin: auto;
+}/*# sourceMappingURL=app.css.map */
