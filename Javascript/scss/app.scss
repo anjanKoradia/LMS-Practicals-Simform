@@ -22,3 +22,14 @@ body {
   height: 100vh;
   margin: auto;
 }
+
+// Global CSS
+p {
+  margin-bottom: 0;
+}
+
+.fas {
+  cursor: pointer;
+}
+
+@import "./calculator";

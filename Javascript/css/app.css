@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 html {
   --bg: #f5f6f7;
+  --hover: #efefef;
   --color-text: rgb(75, 74, 74);
   --orange: #ff735c;
   --shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
@@ -32,4 +33,150 @@ body {
   max-width: 1920px;
   height: 100vh;
   margin: auto;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.fas {
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+main .main_title h2 {
+  font-size: 3.2rem;
+  color: var(--color-text);
+}
+main .main_title h2 i {
+  color: var(--orange);
+}
+main .main_title h1 {
+  font-size: 6.4rem;
+}
+main .calculator_container {
+  display: flex;
+  align-items: flex-end;
+}
+main .calculator_container .man_standing img {
+  width: 250px;
+}
+main .calculator_container .calculator {
+  width: 300px;
+  height: 100%;
+  border-radius: 20px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+}
+main .calculator_container .calculator .mobile_notch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+}
+main .calculator_container .calculator .calc_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 10px 20px;
+  color: var(--color-text);
+  font-size: 2rem;
+}
+main .calculator_container .calculator .calc_heading p span {
+  color: var(--orange);
+  font-size: 0.5rem;
+}
+main .calculator_container .calculator .calc_heading .toggle_switch label span {
+  display: none;
+}
+main .calculator_container .calculator .calc_heading .toggle_switch label input[type=checkbox] {
+  appearance: none;
+}
+main .calculator_container .calculator .calc_heading .toggle_switch label input[type=checkbox]:checked ~ .fas {
+  color: var(--orange);
+}
+main .calculator_container .calculator .result {
+  position: relative;
+}
+main .calculator_container .calculator .result .history {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100px;
+}
+main .calculator_container .calculator .result .history .upper_value {
+  width: 100%;
+  text-align: end;
+  word-wrap: break-word;
+  padding: 0 2rem;
+  font-size: 2rem;
+  color: var(--color-text);
+}
+main .calculator_container .calculator .result .output {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+main .calculator_container .calculator .result .output .lower_value {
+  padding: 0.5rem 2rem;
+  font-size: 3rem;
+  color: var(--color-text);
+  font-weight: bold;
+  word-wrap: break-word;
+  overflow-x: auto;
+  text-align: right;
+}
+main .calculator_container .calculator .keyboard {
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+main .calculator_container .calculator .keyboard > div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 0.5rem;
+}
+main .calculator_container .calculator .keyboard > div:nth-child(1) {
+  justify-content: flex-start;
+}
+main .calculator_container .calculator .keyboard > div button {
+  padding: 1rem 1.5rem;
+  border: none;
+  background-color: var(--bg);
+  font-weight: 500;
+  font-size: 1.4rem;
+  cursor: pointer;
+  outline: none;
+}
+main .calculator_container .calculator .keyboard > div button:hover {
+  background-color: var(--hover);
+}
+main .calculator_container .calculator .keyboard > div .operation {
+  color: var(--orange);
+}
+main .calculator_container .calculator .keyboard .line_3 {
+  justify-content: start;
+}
+main .calculator_container .calculator .keyboard .line_3 .dropdown-menu {
+  padding: 0;
+  width: 210px;
+  border: none;
+}
+main .calculator_container .calculator .keyboard .line_3 .dropdown-menu .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+main .calculator_container .calculator .keyboard .line_3 .function .dropdown-menu {
+  width: 180px !important;
 }/*# sourceMappingURL=app.css.map */
