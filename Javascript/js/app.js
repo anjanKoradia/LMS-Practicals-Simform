@@ -8,3 +8,12 @@ checkbox.addEventListener("change", function () {
   }
 });
 
+// Set Current Time in mobile notch
+setInterval(function () {
+  var currentTime = new Date().toLocaleTimeString("en-US", {
+    hour12: true,
+    hour: "numeric",
+    minute: "numeric",
+  });
+  document.querySelector(".time").innerHTML = currentTime;
+}, 1000);
