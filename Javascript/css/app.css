@@ -61,6 +61,7 @@ main .main_title h2 i {
 }
 main .main_title h1 {
   font-size: 6.4rem;
+  color: var(--color-text);
 }
 main .calculator_container {
   display: flex;
