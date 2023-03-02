@@ -189,4 +189,77 @@ main .calculator_container .calculator .keyboard .line_3 .dropdown-menu .row {
 }
 main .calculator_container .calculator .keyboard .line_3 .function .dropdown-menu {
   width: 210px !important;
-}/*# sourceMappingURL=app.css.map */
+}
+
+/* Media Query Start */
+@media screen and (max-width: 1440px) {
+  main .main_title h2 {
+    font-size: 2.6rem;
+  }
+  main .main_title h1 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 925px) {
+  main .main_title h2 {
+    font-size: 2.2rem;
+  }
+  main .main_title h1 {
+    font-size: 3.4rem;
+  }
+}
+@media screen and (min-width: 845px) {
+  main {
+    height: 100vh;
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 844px) {
+  main {
+    flex-direction: column;
+  }
+  main .main_title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+  main .main_title h2 {
+    font-size: 2.2rem;
+  }
+  main .main_title h1 {
+    margin: 0 1rem;
+    font-size: 3.8rem;
+  }
+}
+@media screen and (max-width: 590px) {
+  main {
+    margin: 0;
+  }
+  main .main_title h2 {
+    font-size: 2rem;
+  }
+  main .main_title h1 {
+    font-size: 3.4rem;
+  }
+  main .calculator_container .man_standing img {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .main_title h2 {
+    font-size: 1.6rem;
+  }
+  main .main_title h1 {
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  main .main_title h2 {
+    font-size: 1.6rem;
+  }
+  main .main_title h1 {
+    font-size: 2.8rem;
+  }
+}
+/* Media Query End *//*# sourceMappingURL=app.css.map */
