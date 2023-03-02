@@ -1,0 +1,22 @@
+// Google Font CDN
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: white;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: var(--bg);
+  max-width: 1920px;
+  height: 100vh;
+  margin: auto;
+}

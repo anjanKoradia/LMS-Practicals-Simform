@@ -1,0 +1,14 @@
+html {
+  --bg: #f5f6f7;
+  --color-text: rgb(75, 74, 74);
+  --orange: #ff735c;
+  --shadow: 0 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="dark"] {
+  --bg: #131419;
+  --color-text: #ffffff;
+  --orange: #ff735c;
+  --shadow: -3px -3px 10px rgba(255, 255, 255, 0.05),
+    3px 3px 15px rgba(0, 0, 0, 0.5);
+}
