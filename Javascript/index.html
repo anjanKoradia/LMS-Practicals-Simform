@@ -62,20 +62,20 @@
               <p class="upper_value"></p>
             </div>
             <div class="output">
-              <p class="lower_value"></p>
+              <p class="lower_value">0</p>
             </div>
           </div>
           <div class="keyboard">
             <div class="line_1">
-              <button class="deg_rad operation" value="deg">DEG</button>
-              <button class="operation" value="fe">F-E</button>
+              <button class="deg_rad" value="rad">RAD</button>
+              <button class="calc_btn" value="fe">F-E</button>
             </div>
             <div class="line_2">
-              <button class="operation" value="mc">MC</button>
-              <button class="operation" value="mr">MR</button>
-              <button class="operation" value="m+">M+</button>
-              <button class="operation" value="m-">M-</button>
-              <button class="operation" value="ms">MS</button>
+              <button class="calc_btn" value="mc">MC</button>
+              <button class="calc_btn" value="mr">MR</button>
+              <button class="calc_btn" value="m+">M+</button>
+              <button class="calc_btn" value="m-">M-</button>
+              <button class="calc_btn" value="ms">MS</button>
             </div>
             <div class="line_3">
               <div class="dropdown trigonometry">
@@ -89,28 +89,28 @@
                 </button>
                 <ul class="dropdown-menu">
                   <div class="row">
-                    <button class="operation" value="sin">sin</button>
-                    <button class="operation" value="cos">cos</button>
-                    <button class="operation" value="tan">tan</button>
-                    <button class="operation" value="sec">sec</button>
-                    <button class="operation" value="cosec">cosec</button>
-                    <button class="operation" value="cot">cot</button>
-                    <button class="operation" value="-sin">
+                    <button class="calc_btn" value="sin">sin</button>
+                    <button class="calc_btn" value="cos">cos</button>
+                    <button class="calc_btn" value="tan">tan</button>
+                    <button class="calc_btn" value="sec">sec</button>
+                    <button class="calc_btn" value="cosec">cosec</button>
+                    <button class="calc_btn" value="cot">cot</button>
+                    <button class="calc_btn" value="asin">
                       sin <sup>-1</sup>
                     </button>
-                    <button class="operation" value="-cos">
+                    <button class="calc_btn" value="acos">
                       cos <sup>-1</sup>
                     </button>
-                    <button class="operation" value="-tan">
+                    <button class="calc_btn" value="atan">
                       tan <sup>-1</sup>
                     </button>
-                    <button class="operation" value="-sec">
+                    <button class="calc_btn" value="asec">
                       sec <sup>-1</sup>
                     </button>
-                    <button class="operation" value="-cosec">
+                    <button class="calc_btn" value="acosec">
                       cosec <sup>-1</sup>
                     </button>
-                    <button class="operation" value="-cot">
+                    <button class="calc_btn" value="acot">
                       cot <sup>-1</sup>
                     </button>
                   </div>
@@ -122,18 +122,18 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <div class="row">
-                    <button class="operation" value="abs">|x|</button>
-                    <button class="operation" value="floor">
+                    <button class="calc_btn" value="round">[x]</button>
+                    <button class="calc_btn" value="floor">
                       &LeftFloor;x&RightFloor;
                     </button>
-                    <button class="operation" value="ceil">
+                    <button class="calc_btn" value="ceil">
                       &LeftCeiling;x&RightCeiling;
                     </button>
-                    <button class="operation" value="rand">rand</button>
-                    <button class="operation" value="dms">
+                    <button class="calc_btn" value="rand">rand</button>
+                    <button class="calc_btn" value="dms">
                       <i class="fa-solid fa-arrow-right me-1"></i>dms
                     </button>
-                    <button class="operation" value="deg">
+                    <button class="calc_btn" value="deg">
                       <i class="fa-solid fa-arrow-right me-1"></i>deg
                     </button>
                   </div>
@@ -141,63 +141,63 @@
               </div>
             </div>
             <div class="line_4">
-              <button class="operation">2 <sup>nd</sup></button>
-              <button class="operation">n</button>
-              <button class="operation">e</button>
-              <button class="operation">C</button>
-              <button class="operation">
+              <button class="calc_btn">2 <sup>nd</sup></button>
+              <button class="calc_btn" value="pi">π</button>
+              <button class="calc_btn" value="e">e</button>
+              <button class="calc_btn" value="clear">C</button>
+              <button class="calc_btn" value="delete">
                 <i class="fa-solid fa-delete-left"></i>
               </button>
             </div>
             <div class="line_5">
-              <button class="operation" value="sqr">x <sup>2</sup></button>
-              <button class="operation">1/x</button>
-              <button class="operation">|x|</button>
-              <button class="operation">exp</button>
-              <button class="operation" value="mod">mod</button>
+              <button class="calc_btn" value="sqr">x <sup>2</sup></button>
+              <button class="calc_btn" value="frac">1/x</button>
+              <button class="calc_btn" value="abs">|x|</button>
+              <button class="calc_btn" value="exp">exp</button>
+              <button class="calc_btn" value="mod">mod</button>
             </div>
             <div class="line_6">
-              <button class="operation" value="sqrt">&#8730;x</button>
-              <button class="operation" value="(">(</button>
-              <button class="operation" value=")">)</button>
-              <button class="operation" value="fact">n!</button>
-              <button class="operation" value="/">
+              <button class="calc_btn" value="sqrt">&#8730;x</button>
+              <button class="calc_btn" value="(">(</button>
+              <button class="calc_btn" value=")">)</button>
+              <button class="calc_btn" value="fact">n!</button>
+              <button class="calc_btn" value="division">
                 <i class="fa-solid fa-divide"></i>
               </button>
             </div>
             <div class="line_7">
-              <button class="operation">x <sup>y</sup></button>
-              <button class="number" value="7">7</button>
-              <button class="number" value="8">8</button>
-              <button class="number" value="9">9</button>
-              <button class="operation" value="*">
+              <button class="calc_btn" value="power">x <sup>y</sup></button>
+              <button class="calc_btn number" value="7">7</button>
+              <button class="calc_btn number" value="8">8</button>
+              <button class="calc_btn number" value="9">9</button>
+              <button class="calc_btn" value="multi">
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
             <div class="line_8">
-              <button class="operation">10 <sup>x</sup></button>
-              <button class="number" value="4">4</button>
-              <button class="number" value="5">5</button>
-              <button class="number" value="6">6</button>
-              <button class="operation" value="-">
+              <button class="calc_btn">10 <sup>x</sup></button>
+              <button class="calc_btn number" value="4">4</button>
+              <button class="calc_btn number" value="5">5</button>
+              <button class="calc_btn number" value="6">6</button>
+              <button class="calc_btn" value="sub">
                 <i class="fa-solid fa-minus"></i>
               </button>
             </div>
             <div class="line_9">
-              <button class="operation" value="log">log</button>
-              <button class="number" value="1">1</button>
-              <button class="number" value="2">2</button>
-              <button class="number" value="3">3</button>
-              <button class="operation" value="+">
+              <button class="calc_btn" value="log">log</button>
+              <button class="calc_btn number" value="1">1</button>
+              <button class="calc_btn number" value="2">2</button>
+              <button class="calc_btn number" value="3">3</button>
+              <button class="calc_btn" value="add">
                 <i class="fa-solid fa-plus"></i>
               </button>
             </div>
             <div class="line_10">
-              <button class="operation">In</button>
-              <button class="operation">+/-</button>
-              <button class="number" value="0">0</button>
-              <button class="operation" value=".">.</button>
-              <button class="operation" value="=">
+              <button class="calc_btn" value="ln">ln</button>
+              <button class="calc_btn">+/-</button>
+              <button class="calc_btn number" value="0">0</button>
+              <button class="calc_btn" value="dot">.</button>
+              <button class="calc_btn" value="equal">
                 <i class="fa-solid fa-equals"></i>
               </button>
             </div>
@@ -219,6 +219,7 @@
     ></script>
 
     <!-- External custom JS -->
-    <script src="./js/app.js"></script>
+    <script type="text/javascript" src="./data/keys.json"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
   </body>
 </html>
