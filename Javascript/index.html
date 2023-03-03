@@ -52,7 +52,7 @@
             <div class="toggle_switch">
               <label>
                 <input type="checkbox" name="theme" id="checkbox" />
-                <span class="btn"></span>
+                <span class=""></span>
                 <i class="fas fa-moon"></i>
               </label>
             </div>
@@ -67,15 +67,15 @@
           </div>
           <div class="keyboard">
             <div class="line_1">
-              <button class="deg_rad btn operation">DEG</button>
-              <button class="btn operation">F-E</button>
+              <button class="deg_rad operation" value="deg">DEG</button>
+              <button class="operation" value="fe">F-E</button>
             </div>
             <div class="line_2">
-              <button class="btn operation">MC</button>
-              <button class="btn operation">MR</button>
-              <button class="btn operation">M+</button>
-              <button class="btn operation">M-</button>
-              <button class="btn operation">MS</button>
+              <button class="operation" value="mc">MC</button>
+              <button class="operation" value="mr">MR</button>
+              <button class="operation" value="m+">M+</button>
+              <button class="operation" value="m-">M-</button>
+              <button class="operation" value="ms">MS</button>
             </div>
             <div class="line_3">
               <div class="dropdown trigonometry">
@@ -89,18 +89,30 @@
                 </button>
                 <ul class="dropdown-menu">
                   <div class="row">
-                    <button class="btn operation">sin</button>
-                    <button class="btn operation">cos</button>
-                    <button class="btn operation">tan</button>
-                    <button class="btn operation">sec</button>
-                    <button class="btn operation">cosec</button>
-                    <button class="btn operation">cot</button>
-                    <button class="btn operation">sin <sup>-1</sup></button>
-                    <button class="btn operation">cos <sup>-1</sup></button>
-                    <button class="btn operation">tan <sup>-1</sup></button>
-                    <button class="btn operation">sec <sup>-1</sup></button>
-                    <button class="btn operation">cosec <sup>-1</sup></button>
-                    <button class="btn operation">cot <sup>-1</sup></button>
+                    <button class="operation" value="sin">sin</button>
+                    <button class="operation" value="cos">cos</button>
+                    <button class="operation" value="tan">tan</button>
+                    <button class="operation" value="sec">sec</button>
+                    <button class="operation" value="cosec">cosec</button>
+                    <button class="operation" value="cot">cot</button>
+                    <button class="operation" value="-sin">
+                      sin <sup>-1</sup>
+                    </button>
+                    <button class="operation" value="-cos">
+                      cos <sup>-1</sup>
+                    </button>
+                    <button class="operation" value="-tan">
+                      tan <sup>-1</sup>
+                    </button>
+                    <button class="operation" value="-sec">
+                      sec <sup>-1</sup>
+                    </button>
+                    <button class="operation" value="-cosec">
+                      cosec <sup>-1</sup>
+                    </button>
+                    <button class="operation" value="-cot">
+                      cot <sup>-1</sup>
+                    </button>
                   </div>
                 </ul>
               </div>
@@ -110,18 +122,18 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <div class="row">
-                    <button class="btn operation">|x|</button>
-                    <button class="btn operation">
+                    <button class="operation" value="abs">|x|</button>
+                    <button class="operation" value="floor">
                       &LeftFloor;x&RightFloor;
                     </button>
-                    <button class="btn operation">
+                    <button class="operation" value="ceil">
                       &LeftCeiling;x&RightCeiling;
                     </button>
-                    <button class="btn operation">rand</button>
-                    <button class="btn operation">
+                    <button class="operation" value="rand">rand</button>
+                    <button class="operation" value="dms">
                       <i class="fa-solid fa-arrow-right me-1"></i>dms
                     </button>
-                    <button class="btn operation">
+                    <button class="operation" value="deg">
                       <i class="fa-solid fa-arrow-right me-1"></i>deg
                     </button>
                   </div>
@@ -138,54 +150,54 @@
               </button>
             </div>
             <div class="line_5">
-              <button class="operation">x <sup>2</sup></button>
+              <button class="operation" value="sqr">x <sup>2</sup></button>
               <button class="operation">1/x</button>
               <button class="operation">|x|</button>
               <button class="operation">exp</button>
-              <button class="operation">mod</button>
+              <button class="operation" value="mod">mod</button>
             </div>
             <div class="line_6">
-              <button class="operation">&#8730;x</button>
-              <button class="operation">(</button>
-              <button class="operation">)</button>
-              <button class="operation">n!</button>
-              <button class="operation">
+              <button class="operation" value="sqrt">&#8730;x</button>
+              <button class="operation" value="(">(</button>
+              <button class="operation" value=")">)</button>
+              <button class="operation" value="fact">n!</button>
+              <button class="operation" value="/">
                 <i class="fa-solid fa-divide"></i>
               </button>
             </div>
             <div class="line_7">
               <button class="operation">x <sup>y</sup></button>
-              <button class="number">7</button>
-              <button class="number">8</button>
-              <button class="number">9</button>
-              <button class="operation">
+              <button class="number" value="7">7</button>
+              <button class="number" value="8">8</button>
+              <button class="number" value="9">9</button>
+              <button class="operation" value="*">
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
             <div class="line_8">
               <button class="operation">10 <sup>x</sup></button>
-              <button class="number">4</button>
-              <button class="number">5</button>
-              <button class="number">6</button>
-              <button class="operation">
+              <button class="number" value="4">4</button>
+              <button class="number" value="5">5</button>
+              <button class="number" value="6">6</button>
+              <button class="operation" value="-">
                 <i class="fa-solid fa-minus"></i>
               </button>
             </div>
             <div class="line_9">
-              <button class="operation">log</button>
-              <button class="number">1</button>
-              <button class="number">2</button>
-              <button class="number">3</button>
-              <button class="operation">
+              <button class="operation" value="log">log</button>
+              <button class="number" value="1">1</button>
+              <button class="number" value="2">2</button>
+              <button class="number" value="3">3</button>
+              <button class="operation" value="+">
                 <i class="fa-solid fa-plus"></i>
               </button>
             </div>
             <div class="line_10">
               <button class="operation">In</button>
               <button class="operation">+/-</button>
-              <button class="number">0</button>
-              <button class="operation">.</button>
-              <button class="operation">
+              <button class="number" value="0">0</button>
+              <button class="operation" value=".">.</button>
+              <button class="operation" value="=">
                 <i class="fa-solid fa-equals"></i>
               </button>
             </div>
