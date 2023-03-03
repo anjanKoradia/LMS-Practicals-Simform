@@ -355,6 +355,26 @@ function calculate(btn) {
       data.formula.push(btn.formula);
       break;
 
+    case "math":
+      let symbol, formula;
+
+      if (
+        btn.value == "sqr" ||
+        btn.value == "fact" ||
+        btn.value == "power" ||
+        btn.value == "mod"
+      ) {
+        symbol = btn.symbol;
+        formula = btn.formula;
+      } else {
+        symbol = btn.symbol + "(";
+        formula = btn.formula + "(";
+      }
+
+      data.operation.push(symbol);
+      data.formula.push(formula);
+      break;
+
     case "key":
       if (btn.value == "clear") {
         data.operation = [];
