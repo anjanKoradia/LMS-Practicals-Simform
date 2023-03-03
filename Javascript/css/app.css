@@ -158,12 +158,10 @@ main .calculator_container .calculator .keyboard > div button {
   font-size: 1.4rem;
   cursor: pointer;
   outline: none;
+  color: var(--orange);
 }
 main .calculator_container .calculator .keyboard > div button:hover {
   background-color: var(--hover);
-}
-main .calculator_container .calculator .keyboard > div .operation {
-  color: var(--orange);
 }
 main .calculator_container .calculator .keyboard > div .number {
   color: var(--color-text);

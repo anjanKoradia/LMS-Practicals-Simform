@@ -136,15 +136,13 @@ main {
             font-size: 1.4rem;
             cursor: pointer;
             outline: none;
+            color: var(--orange);
 
             &:hover {
               background-color: var(--hover);
             }
           }
 
-          .operation {
-            color: var(--orange);
-          }
           .number {
             color: var(--color-text);
           }
