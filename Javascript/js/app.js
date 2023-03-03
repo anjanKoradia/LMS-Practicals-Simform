@@ -307,6 +307,36 @@ class Display {
   }
 }
 
+// Angle config
+let deg_rad_btn = document.querySelector(".deg_rad");
+let RADIAN = true;
+deg_rad_btn.addEventListener("click", (e) => {
+  if (e.target.value == "rad") {
+    deg_rad_btn.innerText = "DEG";
+    e.target.value = "deg";
+    RADIAN = false;
+  } else {
+    deg_rad_btn.innerText = "RAD";
+    e.target.value = "rad";
+    RADIAN = true;
+  }
+});
+
+// Trigonometric function
+function trigo(formula, angle) {
+  if (!RADIAN) {
+    angle = (angle * Math.PI) / 180;
+  }
+  return formula(angle);
+}
+function inv_trigo(formula, angle) {
+  angle = formula(angle);
+  if (!RADIAN) {
+    angle = (angle * 180) / Math.PI;
+  }
+  return angle;
+}
+
 // Perform all calculations
 function calculate(btn) {
   switch (btn.type) {
@@ -317,6 +347,11 @@ function calculate(btn) {
 
     case "number":
       data.operation.push(btn.symbol);
+      data.formula.push(btn.formula);
+      break;
+
+    case "trigo":
+      data.operation.push(btn.symbol + "(");
       data.formula.push(btn.formula);
       break;
 
