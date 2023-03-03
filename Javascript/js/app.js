@@ -333,6 +333,15 @@ function search(array, keyword) {
   return searchResult;
 }
 
+// factorial
+function factorial(number) {
+  if (number == 0 || number == 1) {
+    return 1;
+  } else {
+    return number * factorial(number - 1);
+  }
+}
+
 class Display {
   // Display input
   static input(operation) {
@@ -378,6 +387,35 @@ class Extractor {
       powerBase.push(base.join(""));
     });
     return powerBase;
+  }
+
+  // factorial number extractor
+  static factNumber(formula, FACTORIAL_SEARCH_RESULT) {
+    let numbers = []; // save all numbers
+
+    FACTORIAL_SEARCH_RESULT.forEach((index) => {
+      let number = []; // save current index
+
+      let count = 0; // parenthesis counter
+      let prevIndex = index - 1;
+
+      while (prevIndex >= 0) {
+        if (formula[prevIndex] == "(") count--;
+        if (formula[prevIndex] == ")") count++;
+
+        let isOperator = false;
+        OPERATORS.forEach((operator) => {
+          if (formula[prevIndex] == operator) isOperator = true;
+        });
+
+        if (isOperator && count == 0) break;
+
+        number.unshift(formula[prevIndex]);
+        prevIndex--;
+      }
+      numbers.push(number.join(""));
+    });
+    return numbers;
   }
 }
 
@@ -456,6 +494,19 @@ function calculate(btn) {
       POWER_2_BASES.forEach((base) => {
         let toReplace = base + "POWER_2";
         let replacement = "Math.pow(" + base + ",2)";
+
+        formula_str = formula_str.replace(toReplace, replacement);
+      });
+
+      // For factorial
+      let FACTORIAL_SEARCH_RESULT = search(data.formula, "FACTORIAL");
+      const NUMBERS = Extractor.factNumber(
+        data.formula,
+        FACTORIAL_SEARCH_RESULT
+      );
+      NUMBERS.forEach((number) => {
+        let toReplace = number + "FACTORIAL";
+        let replacement = "factorial(" + number + ")";
 
         formula_str = formula_str.replace(toReplace, replacement);
       });
