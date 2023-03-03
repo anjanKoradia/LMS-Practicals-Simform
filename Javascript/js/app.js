@@ -292,21 +292,6 @@ for (let key of inputKeys) {
   });
 }
 
-class Display {
-  // Display input
-  static input(operation) {
-    let inputBox = document.querySelector(".history .upper_value");
-    inputBox.innerHTML = operation;
-  }
-
-  // Display Output
-  static output(result) {
-    let outputBox = document.querySelector(".output .lower_value");
-    outputBox.innerHTML = result;
-    data.output = result;
-  }
-}
-
 // Angle config
 let deg_rad_btn = document.querySelector(".deg_rad");
 let RADIAN = true;
@@ -335,6 +320,65 @@ function inv_trigo(formula, angle) {
     angle = (angle * 180) / Math.PI;
   }
   return angle;
+}
+
+// use to search given keyword in array
+function search(array, keyword) {
+  let searchResult = [];
+
+  array.forEach((ele, index) => {
+    if (ele == keyword) searchResult.push(index);
+  });
+
+  return searchResult;
+}
+
+class Display {
+  // Display input
+  static input(operation) {
+    let inputBox = document.querySelector(".history .upper_value");
+    inputBox.innerHTML = operation;
+  }
+
+  // Display Output
+  static output(result) {
+    let outputBox = document.querySelector(".output .lower_value");
+    outputBox.innerHTML = result;
+    data.output = result;
+  }
+}
+
+class Extractor {
+  // power base extractor
+  static powerBase(formula, POWER_SEARCH_RESULT) {
+    let powerBase = []; // save all bases
+
+    POWER_SEARCH_RESULT.forEach((index) => {
+      let base = []; // save current bases
+      let count = 0; // parenthesis counter
+      let prevIndex = index - 1;
+
+      while (prevIndex >= 0) {
+        if (formula[prevIndex] == "(") count--;
+        if (formula[prevIndex] == ")") count++;
+
+        let isOperator = false;
+        OPERATORS.forEach((operator) => {
+          if (formula[prevIndex] == operator) isOperator = true;
+        });
+
+        let isPower =
+          formula[prevIndex] == "POWER" || formula[prevIndex] == "POWER_2";
+
+        if ((isOperator && count == 0) || isPower) break;
+
+        base.unshift(formula[prevIndex]);
+        prevIndex--;
+      }
+      powerBase.push(base.join(""));
+    });
+    return powerBase;
+  }
 }
 
 // Perform all calculations
@@ -388,6 +432,33 @@ function calculate(btn) {
 
     case "calculate":
       let formula_str = data.formula.join("");
+
+      // For power x^y
+      let POWER_SEARCH_RESULT = search(data.formula, "POWER");
+      const POWER_BASES = Extractor.powerBase(
+        data.formula,
+        POWER_SEARCH_RESULT
+      );
+      POWER_BASES.forEach((base) => {
+        let toReplace = base + "POWER";
+        let replacement = "Math.pow(" + base + ",";
+
+        formula_str = formula_str.replace(toReplace, replacement);
+      });
+
+      // For power X^2
+      let POWER_2_SEARCH_RESULT = search(data.formula, "POWER_2");
+      console.log(POWER_2_SEARCH_RESULT);
+      const POWER_2_BASES = Extractor.powerBase(
+        data.formula,
+        POWER_2_SEARCH_RESULT
+      );
+      POWER_2_BASES.forEach((base) => {
+        let toReplace = base + "POWER_2";
+        let replacement = "Math.pow(" + base + ",2)";
+
+        formula_str = formula_str.replace(toReplace, replacement);
+      });
 
       // calculate result
       let result;
