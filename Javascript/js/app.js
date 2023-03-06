@@ -18,6 +18,7 @@ const inputKeys = document.getElementsByClassName("calc_btn");
 
 for (let key of inputKeys) {
   key.addEventListener("click", (e) => {
+    // closest will find the nearest parent button element of target element
     let target_btn = e.target.closest("button");
 
     keyData.forEach((btn) => {
@@ -89,7 +90,8 @@ class Display {
   // Display Output
   static output(result) {
     let outputBox = document.querySelector(".output .lower_value");
-    outputBox.innerHTML = result == 0 ? result : Number(result).toPrecision(9);
+    outputBox.innerHTML =
+      result.toString().length > 15 ? Number(result).toPrecision(9) : result;
   }
 }
 
