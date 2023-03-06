@@ -48,8 +48,7 @@ document.addEventListener("keydown", (e) => {
       Display.output(0);
       break;
 
-    case "Enter":
-    case "=":
+    case "Enter" || "=":
       calculateResult();
   }
 
