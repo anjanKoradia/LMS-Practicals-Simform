@@ -89,7 +89,7 @@ class Display {
   // Display Output
   static output(result) {
     let outputBox = document.querySelector(".output .lower_value");
-    outputBox.innerHTML = result;
+    outputBox.innerHTML = result == 0 ? result : Number(result).toPrecision(9);
   }
 }
 
