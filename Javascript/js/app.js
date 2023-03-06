@@ -1,4 +1,9 @@
 let keyData;
+const OPERATORS = ["+", "-", "/", "*"];
+let data = {
+  operation: [],
+  formula: [],
+};
 
 var xhr = new XMLHttpRequest();
 xhr.onload = function () {
@@ -7,11 +12,62 @@ xhr.onload = function () {
 xhr.open("GET", "../data/keys.json", false);
 xhr.send();
 
-const OPERATORS = ["+", "-", "/", "*"];
-let data = {
-  operation: [],
-  formula: [],
-};
+// input from keyboard
+let keys = [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "0",
+  "+",
+  "-",
+  "*",
+  "/",
+  "%",
+  "^",
+  "(",
+  ")",
+  ".",
+];
+document.addEventListener("keydown", (e) => {
+  let k = e.key;
+  switch (k) {
+    case "Backspace":
+      data.operation.pop();
+      data.formula.pop();
+      break;
+
+    case "Delete":
+      data.operation = [];
+      data.formula = [];
+      Display.output(0);
+      break;
+
+    case "Enter":
+    case "=":
+      calculateResult();
+  }
+
+  if (keys.includes(k)) {
+    let btn = keyData.find((obj) => {
+      return obj.formula == k;
+    });
+
+    if (btn.type == "operator") {
+      validateInput(btn.symbol, btn.formula, btn.type);
+    } else {
+      data.operation.push(btn.symbol);
+      data.formula.push(btn.formula);
+    }
+  }
+
+  Display.input(data.operation.join(""));
+});
 
 // calculators buttons
 const inputKeys = document.getElementsByClassName("calc_btn");
@@ -170,6 +226,56 @@ function validateInput(operation, formula, type) {
   }
 }
 
+function calculateResult() {
+  let formula_str = data.formula.join("");
+
+  // For power x^y
+  let POWER_SEARCH_RESULT = search(data.formula, "POWER");
+  const POWER_BASES = Extractor.powerBase(data.formula, POWER_SEARCH_RESULT);
+  POWER_BASES.forEach((base) => {
+    let toReplace = base + "POWER";
+    let replacement = "Math.pow(" + base + ",";
+
+    formula_str = formula_str.replace(toReplace, replacement);
+  });
+
+  // For power X^2
+  let POWER_2_SEARCH_RESULT = search(data.formula, "POWER_2");
+  const POWER_2_BASES = Extractor.powerBase(
+    data.formula,
+    POWER_2_SEARCH_RESULT
+  );
+  POWER_2_BASES.forEach((base) => {
+    let toReplace = base + "POWER_2";
+    let replacement = "Math.pow(" + base + ",2)";
+
+    formula_str = formula_str.replace(toReplace, replacement);
+  });
+
+  // For factorial
+  let FACTORIAL_SEARCH_RESULT = search(data.formula, "FACTORIAL");
+  const NUMBERS = Extractor.factNumber(data.formula, FACTORIAL_SEARCH_RESULT);
+  NUMBERS.forEach((number) => {
+    let toReplace = number + "FACTORIAL";
+    let replacement = "factorial(" + number + ")";
+
+    formula_str = formula_str.replace(toReplace, replacement);
+  });
+
+  // calculate result
+  let result;
+  try {
+    result = eval(formula_str);
+  } catch (error) {
+    if (error instanceof SyntaxError) {
+      result = "Syntax Error";
+      Display.output(result);
+      return;
+    }
+  }
+  Display.output(result);
+}
+
 // Perform all calculations
 function calculate(btn) {
   switch (btn.type) {
@@ -250,59 +356,7 @@ function calculate(btn) {
       break;
 
     case "calculate":
-      let formula_str = data.formula.join("");
-
-      // For power x^y
-      let POWER_SEARCH_RESULT = search(data.formula, "POWER");
-      const POWER_BASES = Extractor.powerBase(
-        data.formula,
-        POWER_SEARCH_RESULT
-      );
-      POWER_BASES.forEach((base) => {
-        let toReplace = base + "POWER";
-        let replacement = "Math.pow(" + base + ",";
-
-        formula_str = formula_str.replace(toReplace, replacement);
-      });
-
-      // For power X^2
-      let POWER_2_SEARCH_RESULT = search(data.formula, "POWER_2");
-      const POWER_2_BASES = Extractor.powerBase(
-        data.formula,
-        POWER_2_SEARCH_RESULT
-      );
-      POWER_2_BASES.forEach((base) => {
-        let toReplace = base + "POWER_2";
-        let replacement = "Math.pow(" + base + ",2)";
-
-        formula_str = formula_str.replace(toReplace, replacement);
-      });
-
-      // For factorial
-      let FACTORIAL_SEARCH_RESULT = search(data.formula, "FACTORIAL");
-      const NUMBERS = Extractor.factNumber(
-        data.formula,
-        FACTORIAL_SEARCH_RESULT
-      );
-      NUMBERS.forEach((number) => {
-        let toReplace = number + "FACTORIAL";
-        let replacement = "factorial(" + number + ")";
-
-        formula_str = formula_str.replace(toReplace, replacement);
-      });
-
-      // calculate result
-      let result;
-      try {
-        result = eval(formula_str);
-      } catch (error) {
-        if (error instanceof SyntaxError) {
-          result = "Syntax Error";
-          Display.output(result);
-          return;
-        }
-      }
-      Display.output(result);
+      calculateResult();
       break;
 
     default:
