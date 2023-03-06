@@ -133,7 +133,7 @@
   },
   {
     "value": "mod",
-    "symbol": "mod",
+    "symbol": "%",
     "formula": "%",
     "type": "math"
   },
