@@ -18,7 +18,7 @@ const inputKeys = document.getElementsByClassName("calc_btn");
 
 for (let key of inputKeys) {
   key.addEventListener("click", (e) => {
-    let target_btn = e.target;
+    let target_btn = e.target.closest("button");
 
     keyData.forEach((btn) => {
       if (btn.value == target_btn.value) {
