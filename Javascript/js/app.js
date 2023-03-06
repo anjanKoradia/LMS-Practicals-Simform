@@ -155,12 +155,24 @@ class Extractor {
   }
 }
 
+// check for valid operations
+function validateInput(operation, formula, type) {
+  let lastEle = keyData.find((obj) => {
+    if (obj.symbol == data.operation.slice(-1)) {
+      return obj;
+    }
+  });
+  if (lastEle && lastEle.type !== type) {
+    data.operation.push(operation);
+    data.formula.push(formula);
+  }
+}
+
 // Perform all calculations
 function calculate(btn) {
   switch (btn.type) {
     case "operator":
-      data.operation.push(btn.symbol);
-      data.formula.push(btn.formula);
+      validateInput(btn.symbol, btn.formula, btn.type);
       break;
 
     case "number":
@@ -189,8 +201,7 @@ function calculate(btn) {
         formula = btn.formula + "(";
       }
 
-      data.operation.push(symbol);
-      data.formula.push(formula);
+      validateInput(symbol, formula, btn.type);
       break;
 
     case "key":
