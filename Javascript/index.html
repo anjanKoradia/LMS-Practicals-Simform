@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scientific Calculator</title>
+
+    <!-- Favicon -->
+    <link rel="icon" sizes="76x76" href="./images/favicon.png" />
+
+    <!-- Bootstrap-(v5.3) CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- External custom CSS -->
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+    <main class="container-fluid">
+      <div class="main_title">
+        <h2><i class="fab fa-js-square"></i> JavaScript</h2>
+        <h1>Scientific Calculator</h1>
+      </div>
+      <div class="calculator_container">
+        <div class="man_standing">
+          <img src="./images/man_standing.png" alt="" />
+        </div>
+        <section class="calculator">
+          <div class="mobile_notch">
+            <div class="time"></div>
+            <div class="signals_battery">
+              <i class="fas fa-signal"></i>
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-battery-three-quarters"></i>
+            </div>
+          </div>
+          <div class="calc_heading">
+            <i class="fas fa-align-left"></i>
+            <p>
+              Calculator
+              <span><i class="fas fa-circle"></i></span>
+            </p>
+            <div class="toggle_switch">
+              <label>
+                <input type="checkbox" name="theme" id="checkbox" />
+                <span class=""></span>
+                <i class="fas fa-moon"></i>
+              </label>
+            </div>
+          </div>
+          <div class="result">
+            <div class="history">
+              <p class="upper_value"></p>
+              <!-- <input type="text" name="" class="upper_value" value="" /> -->
+            </div>
+            <div class="output">
+              <p class="lower_value">0</p>
+            </div>
+          </div>
+          <div class="keyboard">
+            <div class="line_1">
+              <button class="deg_rad" value="rad">RAD</button>
+              <button class="calc_btn" disabled>F-E</button>
+            </div>
+            <div class="line_2">
+              <button class="calc_btn" value="mc">MC</button>
+              <button class="calc_btn" value="mr">MR</button>
+              <button class="calc_btn" value="m+">M+</button>
+              <button class="calc_btn" value="m-">M-</button>
+              <button class="calc_btn" value="ms">MS</button>
+            </div>
+            <div class="line_3">
+              <div class="dropdown trigonometry">
+                <button
+                  class="dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="me-1 fs-2">&#x25FF;</span> Trigonometry
+                </button>
+                <ul class="dropdown-menu">
+                  <div class="row">
+                    <button class="calc_btn" value="sin">sin</button>
+                    <button class="calc_btn" value="cos">cos</button>
+                    <button class="calc_btn" value="tan">tan</button>
+                    <button class="calc_btn" value="sec">sec</button>
+                    <button class="calc_btn" value="cosec">cosec</button>
+                    <button class="calc_btn" value="cot">cot</button>
+                    <button class="calc_btn" value="asin">
+                      sin <sup>-1</sup>
+                    </button>
+                    <button class="calc_btn" value="acos">
+                      cos <sup>-1</sup>
+                    </button>
+                    <button class="calc_btn" value="atan">
+                      tan <sup>-1</sup>
+                    </button>
+                    <button class="calc_btn" value="asec">
+                      sec <sup>-1</sup>
+                    </button>
+                    <button class="calc_btn" value="acosec">
+                      cosec <sup>-1</sup>
+                    </button>
+                    <button class="calc_btn" value="acot">
+                      cot <sup>-1</sup>
+                    </button>
+                  </div>
+                </ul>
+              </div>
+              <div class="dropdown function">
+                <button class="dropdown-toggle" data-bs-toggle="dropdown">
+                  <span class="me-1 fs-3"> &#402;</span> Function
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <div class="row">
+                    <button class="calc_btn" value="round">[x]</button>
+                    <button class="calc_btn" value="floor">
+                      &LeftFloor;x&RightFloor;
+                    </button>
+                    <button class="calc_btn" value="ceil">
+                      &LeftCeiling;x&RightCeiling;
+                    </button>
+                    <button class="calc_btn" value="rand" disabled>rand</button>
+                    <button class="calc_btn" value="dms" disabled>
+                      <i class="fa-solid fa-arrow-right me-1"></i>dms
+                    </button>
+                    <button class="calc_btn" value="deg" disabled>
+                      <i class="fa-solid fa-arrow-right me-1"></i>deg
+                    </button>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="line_4">
+              <button class="calc_btn" disabled>2 <sup>nd</sup></button>
+              <button class="calc_btn" value="pi">π</button>
+              <button class="calc_btn" value="e">e</button>
+              <button class="calc_btn" value="clear">C</button>
+              <button class="calc_btn" value="delete">
+                <i class="fa-solid fa-delete-left"></i>
+              </button>
+            </div>
+            <div class="line_5">
+              <button class="calc_btn" value="sqr">x <sup>2</sup></button>
+              <button class="calc_btn" value="frac">1/x</button>
+              <button class="calc_btn" value="abs">|x|</button>
+              <button class="calc_btn" value="exp">exp</button>
+              <button class="calc_btn" value="mod">mod</button>
+            </div>
+            <div class="line_6">
+              <button class="calc_btn" value="sqrt">&#8730;x</button>
+              <button class="calc_btn" value="(">(</button>
+              <button class="calc_btn" value=")">)</button>
+              <button class="calc_btn" value="fact">n!</button>
+              <button class="calc_btn" value="division">
+                <i class="fa-solid fa-divide"></i>
+              </button>
+            </div>
+            <div class="line_7">
+              <button class="calc_btn" value="power">x <sup>y</sup></button>
+              <button class="calc_btn number" value="7">7</button>
+              <button class="calc_btn number" value="8">8</button>
+              <button class="calc_btn number" value="9">9</button>
+              <button class="calc_btn" value="multi">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="line_8">
+              <button class="calc_btn" disabled>10 <sup>x</sup></button>
+              <button class="calc_btn number" value="4">4</button>
+              <button class="calc_btn number" value="5">5</button>
+              <button class="calc_btn number" value="6">6</button>
+              <button class="calc_btn" value="sub">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+            </div>
+            <div class="line_9">
+              <button class="calc_btn" value="log">log</button>
+              <button class="calc_btn number" value="1">1</button>
+              <button class="calc_btn number" value="2">2</button>
+              <button class="calc_btn number" value="3">3</button>
+              <button class="calc_btn" value="add">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+            <div class="line_10">
+              <button class="calc_btn" value="ln">ln</button>
+              <button class="calc_btn" disabled>+/-</button>
+              <button class="calc_btn number" value="0">0</button>
+              <button class="calc_btn" value="dot">.</button>
+              <button class="calc_btn" value="equal">
+                <i class="fa-solid fa-equals"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Bootstrap-(v5.3) JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font Awesome Icon CDN -->
+    <script
+      src="https://kit.fontawesome.com/e490545e1d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- External custom JS -->
+    <script type="text/javascript" src="./data/keys.json"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+  </body>
+</html>
