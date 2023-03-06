@@ -94,6 +94,12 @@ main {
             padding: 0 2rem;
             font-size: 2rem;
             color: var(--color-text);
+            // border: none !important;
+            // background-color: var(--bg);
+
+            // &:focus {
+            //   outline: none;
+            // }
           }
         }
 
@@ -140,6 +146,13 @@ main {
 
             &:hover {
               background-color: var(--hover);
+            }
+          }
+
+          .calc_btn {
+            &:disabled {
+              opacity: 0.65;
+              cursor: not-allowed;
             }
           }
 

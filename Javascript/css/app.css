@@ -163,6 +163,10 @@ main .calculator_container .calculator .keyboard > div button {
 main .calculator_container .calculator .keyboard > div button:hover {
   background-color: var(--hover);
 }
+main .calculator_container .calculator .keyboard > div .calc_btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
 main .calculator_container .calculator .keyboard > div .number {
   color: var(--color-text);
 }
