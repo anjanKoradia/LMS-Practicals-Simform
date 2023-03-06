@@ -1,285 +1,21 @@
-const keyData = [
-  {
-    value: "sqrt",
-    symbol: "√",
-    formula: "Math.sqrt",
-    type: "math",
-  },
-  {
-    value: "sqr",
-    symbol: "^(2)",
-    formula: "POWER_2",
-    type: "math",
-  },
-  {
-    value: "frac",
-    symbol: "1÷",
-    formula: "1/",
-    type: "math",
-  },
-  {
-    value: "abs",
-    symbol: "abs",
-    formula: "Math.abs",
-    type: "math",
-  },
-  {
-    value: "floor",
-    symbol: "floor",
-    formula: "Math.floor",
-    type: "math",
-  },
-  {
-    value: "ceil",
-    symbol: "ceil",
-    formula: "Math.ceil",
-    type: "math",
-  },
-  {
-    value: "mod",
-    symbol: "mod",
-    formula: "%",
-    type: "math",
-  },
-  {
-    value: "(",
-    symbol: "(",
-    formula: "(",
-    type: "number",
-  },
-  {
-    value: ")",
-    symbol: ")",
-    formula: ")",
-    type: "number",
-  },
-  {
-    value: "clear",
-    symbol: "C",
-    formula: false,
-    type: "key",
-  },
-  {
-    value: "delete",
-    symbol: "⌫",
-    formula: false,
-    type: "key",
-  },
-  {
-    value: "pi",
-    symbol: "π",
-    formula: "Math.PI",
-    type: "number",
-  },
-  {
-    value: "cos",
-    symbol: "cos",
-    formula: "trigo(Math.cos,",
-    type: "trigo",
-  },
-  {
-    value: "sin",
-    symbol: "sin",
-    formula: "trigo(Math.sin,",
-    type: "trigo",
-  },
-  {
-    value: "tan",
-    symbol: "tan",
-    formula: "trigo(Math.tan,",
-    type: "trigo",
-  },
-  {
-    value: "7",
-    symbol: 7,
-    formula: 7,
-    type: "number",
-  },
-  {
-    value: "8",
-    symbol: 8,
-    formula: 8,
-    type: "number",
-  },
-  {
-    value: "9",
-    symbol: 9,
-    formula: 9,
-    type: "number",
-  },
-  {
-    value: "division",
-    symbol: "÷",
-    formula: "/",
-    type: "operator",
-  },
-  {
-    value: "e",
-    symbol: "e",
-    formula: "Math.E",
-    type: "number",
-  },
-  {
-    value: "acos",
-    symbol: "acos",
-    formula: "inv_trigo(Math.acos,",
-    type: "trigo",
-  },
-  {
-    value: "asin",
-    symbol: "asin",
-    formula: "inv_trigo(Math.asin,",
-    type: "trigo",
-  },
-  {
-    value: "atan",
-    symbol: "atan",
-    formula: "inv_trigo(Math.atan,",
-    type: "trigo",
-  },
-  {
-    value: "4",
-    symbol: 4,
-    formula: 4,
-    type: "number",
-  },
-  {
-    value: "5",
-    symbol: 5,
-    formula: 5,
-    type: "number",
-  },
-  {
-    value: "6",
-    symbol: 6,
-    formula: 6,
-    type: "number",
-  },
-  {
-    value: "multi",
-    symbol: "×",
-    formula: "*",
-    type: "operator",
-  },
-  {
-    value: "fact",
-    symbol: "!",
-    formula: "FACTORIAL",
-    type: "math",
-  },
-  {
-    value: "exp",
-    symbol: "exp",
-    formula: "Math.exp",
-    type: "math",
-  },
-  {
-    value: "ln",
-    symbol: "ln",
-    formula: "Math.log",
-    type: "math",
-  },
-  {
-    value: "log",
-    symbol: "log",
-    formula: "Math.log10",
-    type: "math",
-  },
-  {
-    value: "1",
-    symbol: 1,
-    formula: 1,
-    type: "number",
-  },
-  {
-    value: "2",
-    symbol: 2,
-    formula: 2,
-    type: "number",
-  },
-  {
-    value: "3",
-    symbol: 3,
-    formula: 3,
-    type: "number",
-  },
-  {
-    value: "sub",
-    symbol: "–",
-    formula: "-",
-    type: "operator",
-  },
-  {
-    value: "power",
-    symbol: "^(",
-    formula: "POWER",
-    type: "math",
-  },
-  {
-    value: "dot",
-    symbol: ".",
-    formula: ".",
-    type: "number",
-  },
-  {
-    value: "0",
-    symbol: 0,
-    formula: 0,
-    type: "number",
-  },
-  {
-    value: "equal",
-    symbol: "=",
-    formula: "=",
-    type: "calculate",
-  },
-  {
-    value: "add",
-    symbol: "+",
-    formula: "+",
-    type: "operator",
-  },
-  {
-    value: "mc",
-    symbol: "",
-    formula: "",
-    type: "memory",
-  },
-  {
-    value: "mr",
-    symbol: "",
-    formula: "",
-    type: "memory",
-  },
-  {
-    value: "m+",
-    symbol: "",
-    formula: "",
-    type: "memory",
-  },
-  {
-    value: "m-",
-    symbol: "",
-    formula: "",
-    type: "memory",
-  },
-  {
-    value: "ms",
-    symbol: "",
-    formula: "",
-    type: "memory",
-  },
-];
+let keyData;
+
+var xhr = new XMLHttpRequest();
+xhr.onload = function () {
+  keyData = JSON.parse(this.responseText);
+};
+xhr.open("GET", "../data/keys.json", false);
+xhr.send();
 
 const OPERATORS = ["+", "-", "/", "*"];
-
 let data = {
   operation: [],
   formula: [],
 };
 
 // calculators buttons
-const inputKeys = document.querySelectorAll(".calc_btn");
+const inputKeys = document.getElementsByClassName("calc_btn");
+
 for (let key of inputKeys) {
   key.addEventListener("click", (e) => {
     let target_btn = e.target;
@@ -346,7 +82,8 @@ class Display {
   // Display input
   static input(operation) {
     let inputBox = document.querySelector(".history .upper_value");
-    inputBox.innerHTML = operation;
+    // inputBox.value = operation;
+    inputBox.innerText = operation;
   }
 
   // Display Output
