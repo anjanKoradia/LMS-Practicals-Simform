@@ -12,33 +12,17 @@
   }
 }
 
-@media screen and (max-width: 925px) {
-  main {
-    .main_title {
-      h2 {
-        font-size: 2.2rem;
-      }
-      h1 {
-        font-size: 3.4rem;
-      }
-    }
-  }
-}
-@media screen and (min-width: 845px) {
-  main {
-    height: 100vh;
-    padding: 2rem;
-  }
-}
-@media screen and (max-width: 844px) {
+@media screen and (max-width: 1024px) {
   main {
     flex-direction: column;
+    height: 100vh;
+    padding: 2rem;
 
     .main_title {
       display: flex;
       align-items: center;
       flex-direction: column;
-      padding: 2rem 0;
+      padding: 4rem 0;
       h2 {
         font-size: 2.2rem;
       }

@@ -71,7 +71,8 @@ main .calculator_container .man_standing img {
   width: 250px;
 }
 main .calculator_container .calculator {
-  width: 300px;
+  min-width: 300px;
+  max-width: 400px;
   height: 100%;
   border-radius: 20px;
   background: var(--bg);
@@ -85,6 +86,9 @@ main .calculator_container .calculator .mobile_notch {
   font-size: 1.2rem;
   padding: 1rem 2rem;
 }
+main .calculator_container .calculator .mobile_notch i {
+  cursor: default;
+}
 main .calculator_container .calculator .calc_heading {
   display: flex;
   justify-content: space-between;
@@ -92,6 +96,9 @@ main .calculator_container .calculator .calc_heading {
   padding: 0 20px 10px 20px;
   color: var(--color-text);
   font-size: 2rem;
+}
+main .calculator_container .calculator .calc_heading .fa-align-left {
+  cursor: not-allowed;
 }
 main .calculator_container .calculator .calc_heading p span {
   color: var(--orange);
@@ -203,29 +210,17 @@ main .calculator_container .calculator .keyboard .line_3 .function .dropdown-men
     font-size: 4rem;
   }
 }
-@media screen and (max-width: 925px) {
-  main .main_title h2 {
-    font-size: 2.2rem;
-  }
-  main .main_title h1 {
-    font-size: 3.4rem;
-  }
-}
-@media screen and (min-width: 845px) {
-  main {
-    height: 100vh;
-    padding: 2rem;
-  }
-}
-@media screen and (max-width: 844px) {
+@media screen and (max-width: 1024px) {
   main {
     flex-direction: column;
+    height: 100vh;
+    padding: 2rem;
   }
   main .main_title {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 4rem 0;
   }
   main .main_title h2 {
     font-size: 2.2rem;
