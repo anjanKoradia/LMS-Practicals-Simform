@@ -353,7 +353,6 @@ class Display {
   static output(result) {
     let outputBox = document.querySelector(".output .lower_value");
     outputBox.innerHTML = result;
-    data.output = result;
   }
 }
 
@@ -468,6 +467,38 @@ function calculate(btn) {
       }
       break;
 
+    case "memory":
+      let memory = localStorage.getItem("calculator-memory");
+
+      if (btn.value == "ms") {
+        let result = Number(eval(data.formula.join("")));
+        localStorage.setItem("calculator-memory", result);
+        data.operation = [];
+        data.formula = [];
+        Display.input(0);
+        Display.output(result);
+      } else if (btn.value == "m+") {
+        let result = Number(eval(data.formula.join(""))) + Number(memory);
+        localStorage.setItem("calculator-memory", result);
+        data.operation = [];
+        data.formula = [];
+        Display.input(0);
+        Display.output(result);
+      } else if (btn.value == "m-") {
+        let result = Number(memory) - Number(eval(data.formula.join("")));
+        localStorage.setItem("calculator-memory", result);
+        data.operation = [];
+        data.formula = [];
+        Display.input(0);
+        Display.output(result);
+      } else if (btn.value == "mr") {
+        data.formula.push(memory);
+        data.operation.push(memory);
+      } else if (btn.value == "mc") {
+        localStorage.setItem("calculator-memory", 0);
+      }
+      break;
+
     case "calculate":
       let formula_str = data.formula.join("");
 
@@ -486,7 +517,6 @@ function calculate(btn) {
 
       // For power X^2
       let POWER_2_SEARCH_RESULT = search(data.formula, "POWER_2");
-      console.log(POWER_2_SEARCH_RESULT);
       const POWER_2_BASES = Extractor.powerBase(
         data.formula,
         POWER_2_SEARCH_RESULT
